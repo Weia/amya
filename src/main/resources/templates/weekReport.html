@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
+    <title>weekReport</title>
+    <style type="text/css"> table.tftable {
+        font-size: 12px;
+        color: #333333;
+        width: 100%;
+        border-width: 1px;
+        border-color: #729ea5;
+        border-collapse: collapse;
+    }
+
+    table.tftable th {
+        font-size: 18px;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: black;
+        text-align: center;
+        background-color: #5B9BD5;
+    }
+
+    table.tftable td {
+        text-align: center;
+        font-size: 14px;
+        border-width: 1px;
+        padding: 0px;
+        border-style: solid;
+        border-color: #729ea5;
+        line-height: 30px;
+    }
+
+    .title {
+        idth: 100%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        text-align: center;
+        background-color: #5B9BD5;
+        color: white;
+        font-weight: 500;
+        text-indent: 3px;
+    }
+
+    p {
+        text-indent: 2em;
+    }
+    </style>
+</head>
+<body>
+<h3>您好：</h3>
+<h3 style="text-indent:2em">社群运营周报如下，请审阅。</h3>
+<div>
+    <h4>一、社群规模</h4>
+    <p th:text="'1.到达用户：截止到'+${reportDate}+'，社群覆盖用户'+${coveUsers}+'，环⽐上周增长'+${coverRatioIce}+'；'"></p>
+    <p th:text="'2.建群数量：截止到'+${reportDate}+'，累计建群'+${buildGroupNum}+'个，环⽐上周增长'+${groupBuildRatioIce}+'；'"></p>
+    <table class="tftable">
+        <tr>
+            <th></th>
+            <th colspan="3">微信群数</th>
+            <th></th>
+            <th colspan="3">群成员数</th>
+        </tr>
+        <tr>
+            <th>客户数分档</th>
+            <th>本周</th>
+            <th>上周</th>
+            <th>周环比</th>
+            <th></th>
+            <th>本周</th>
+            <th>上周</th>
+            <th>周环比</th>
+        </tr>
+    </table>
+</div>
+<div>
+    <h4>二、机器人运营群</h4>
+    <p>1.规模情况：</p>
+    <p th:text="'（1）进群数量：截止到'+${reportDate}+'，机器人进群个数'+${inGroupNum}+'，环⽐上周增长'+${inGroupRatioIce}+'，本周新进群'+${newInGroupNum}+'个
+    ，被踢出群个数'+${kickOutNum}+'个；'"></p>
+    <p th:text="'（2）进群规模：截止到'+${reportDate}+'，机器人群到达用户'+${groupUserNum}+'，环⽐上周增长'+${groupBuildRatioIce}+'，本周减
+少用户个数'+${descUserNum}+'。'"></p>
+    <p>1.活跃情况：</p>
+    <p>（1）消息情况</p>
+    <table class="tftable">
+        <tr>
+            <th></th>
+            <th>本周</th>
+            <th>上周</th>
+            <th>周环比</th>
+        </tr>
+    </table>
+    <p>（2）成员情况</p>
+    <p>（3）TOP20排名</p>
+</div>
+</body>
+</html>
